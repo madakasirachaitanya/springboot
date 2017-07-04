@@ -35,9 +35,9 @@ public class AuthenticationController {
 		LOGGER.info("User:" + user);
 		
 		if (user != null) {
-			session.setAttribute("USER_LOGGED", user);
+			session.setAttribute("LOGGED_IN_USER", user);
 			LOGGER.info("Login Success");
-			return "redirect:../book";
+			return "redirect:../books";
 		} else {
 			LOGGER.error("Login Failure");
 			return "user/login";

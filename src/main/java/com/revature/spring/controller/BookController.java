@@ -17,7 +17,7 @@ import com.revature.spring.service.BookService;
 
 
 @Controller
-@RequestMapping("book")
+@RequestMapping("books")
 public class BookController {
 
 	private static final Logger LOGGER = Logger.getLogger(BookController.class);
@@ -41,6 +41,6 @@ public class BookController {
 		System.out.println("ShowBook:" + isbn);
 		Book book = bookService.findOne(isbn);
 		session.setAttribute("SELECTED_BOOK", book);
-		return "book/show1";
+		return "book/show";
 	}
 }
